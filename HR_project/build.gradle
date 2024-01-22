@@ -1,0 +1,47 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.2'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.mysite'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Spring web
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	// SQL
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	
+	// Spring Boot Devtools : 매번 서버 재시작 하지 않아도 클래스 변경 시 서버 자동으로 재가동
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	// Lombok : Getter, Setter, 생성자 등 메서드를 직접 작성하지 않아도 됨
+	compileOnly 'org.projectlombok:lombok' 
+    annotationProcessor 'org.projectlombok:lombok' 
+    
+    // JPA : 자바 프로그램에서 데이터베이스 저장 / 조회하기 위해
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	
+	// JUnit : 컨트롤러, 서비스파일 등이 없어도 리포지터리만 개별적으로 실행 가능(테스트 목적)
+	testImplementation 'org.junit.jupiter:junit-jupiter' 
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    
+    // 타임리프 : 자바 코드를 삽입할 수 있는 HTML형식의 '템플릿'을 사용하기 위한 템플릿 엔진 중 하나.
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

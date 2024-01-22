@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th>사원명</th>
+            <th>사원번호</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="member : ${memList}">
+            <td th:text="${member.Name}"></td>
+            <td th:text="${member.EmployeeID}"></td>
+        </tr>
+    </tbody>
+</table>

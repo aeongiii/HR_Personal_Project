@@ -6,9 +6,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr th:each="member : ${memList}">
-            <td th:text="${member.Name}"></td>
-            <td th:text="${member.EmployeeID}"></td>
+        <tr th:each="member, index : ${memList}">
+			<td>
+				<a th:href="@{|/HR3/detail/${member.EmployeeID}|}" th:text="${member.Name}"></a>
+			</td>
+            <td th:text="${member.Position}"></td>
         </tr>
     </tbody>
 </table>

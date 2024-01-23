@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.mysite.HR.Entity.HR_mem;
-import com.mysite.HR.Repository.HR_memRepository;
+import com.mysite.HR.Service.MemService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -15,13 +15,13 @@ import lombok.RequiredArgsConstructor;
 @Controller
 public class HR_memController {
 	
-	private final HR_memRepository memRepository;
+	private final MemService memService;
 	
 	@GetMapping("/HR3/list")
 //	@ResponseBody    이 애너테이션이 있으면 mem_list라는 html을 리턴하는게 아니라 "mem_list" 문자 자체를 출력함
 	
 	public String list(Model model) {	// model 객체 따로 생성할 필요 없이 매개변수 지정만 하면 스프링부트에서 생성됨
-		List<HR_mem> memList = this.memRepository.findAll();
+		List<HR_mem> memList = this.memService.getList();
 		model.addAttribute("memList", memList);	// 모든 데이터를 model에 넣어뒀다가 템플릿에서 사용 가능. 
 		return "mem_list";
 	}

@@ -35,8 +35,4 @@ public class HR_mem {
 	
 	private int BankNum;			// NUMBER(20)
 	
-	
-	
-	
-	
 }

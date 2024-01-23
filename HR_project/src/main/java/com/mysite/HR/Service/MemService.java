@@ -29,4 +29,18 @@ public class MemService {
 			throw new DataNotFoundException("member not found");
 		}
 	}
+	
+	public void create(String Name, String EmployeeID, String StartDate,
+			String DeptName, String Position, String Email, int BankNum, int RegularPay) {
+		HR_mem mem1 = new HR_mem();
+		mem1.setName(Name);
+		mem1.setEmployeeID(EmployeeID);
+		mem1.setStartDate(StartDate);
+		mem1.setDeptName(DeptName);
+		mem1.setPosition(Position);
+		mem1.setEmail(Email);
+		mem1.setBankNum(BankNum);
+		mem1.setRegularPay(RegularPay);
+		this.memRepository.save(mem1);
+	}
 }

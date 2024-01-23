@@ -1,16 +1,25 @@
-<table>
-    <thead>
-        <tr>
-            <th>사원명</th>
-            <th>사원번호</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr th:each="member, index : ${memList}">
-			<td>
-				<a th:href="@{|/HR3/detail/${member.EmployeeID}|}" th:text="${member.Name}"></a>
-			</td>
-            <td th:text="${member.Position}"></td>
-        </tr>
-    </tbody>
-</table>
+<html layout:decorate="~{layout}">	<!-- layout.html 상속-->
+<div layout:fragment="content" class="container my-3">
+	<table class = "table">
+	    <thead class="table-dark">
+	        <tr>
+				<th>번호</th>
+	            <th>사원명</th>
+	            <th>담당부서</th>
+	            <th>사원번호</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr th:each="member, loop : ${memList}">
+				<td th:text="${loop.count}"></td>
+				<td>
+					<a th:href="@{|/HR3/detail/${member.EmployeeID}|}" th:text="${member.Name}"></a>
+				</td>
+				<td th:text="${member.DeptName}"></td>
+	            <td th:text="${member.Position}"></td>
+	        </tr>
+	    </tbody>
+	</table>
+	<a th:href="@{/HR3/create}" class="btn btn-primary">사원등록</a>
+</div>
+</html>

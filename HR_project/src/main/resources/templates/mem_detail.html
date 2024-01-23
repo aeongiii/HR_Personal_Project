@@ -1,2 +1,26 @@
-<h1 th:text="${member.Name}"></h1>
-<div th:text="${member.DeptName}"></div>
+<head>
+    <title>Employee Details</title>
+    <!-- 스타일시트 및 기타 헤더 요소 추가 -->
+</head>
+<body>
+    <div class="employee-details">
+        <!-- 사원 이름 -->
+        <h1 th:text="${member.Name}"></h1> <!-- 사원의 이름을 굵은 글씨로 표시 -->
+
+        <!-- 부서와 직급 -->
+        <div class="department">
+            <h2 th:text="${member.DeptName} + ' ' + ${member.Position}"></h2>
+        </div>
+
+        <!-- 직원 상세정보 -->
+        <div class="additional-details">
+            <h3>Additional Details</h3>
+            <p th:text="'사원번호 : ' + ${member.EmployeeID}"></p>
+            <p th:text="'입사일 : ' + ${member.StartDate}"></p>
+            <p th:text="'Email : ' + ${member.Email}"></p>
+            <p th:text="'계좌번호 : ' + ${member.BankNum}"></p>
+            <!-- 추가적으로 필요한 정보들을 여기에 추가 -->
+        </div>
+    </div>
+</body>
+</html>

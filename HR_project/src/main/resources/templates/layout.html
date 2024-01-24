@@ -3,27 +3,40 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=divice-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.css}">
 		<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
 		<title>308호 사원목록</title>
+		<style>
+			body {
+				background-color: #333;
+			}
+		</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="/HR3/list">ERP</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" href="#">로그인</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/HR3/list">Jump to Moon ERP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse " id="navbarColor01" style="">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/HR3/company">회사소개
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">부서소개</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-sm-2" type="search" placeholder="검색 내용 입력">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 		<!-- 기본 템플릿 안에 삽입될 내용 -->
 		<th:block layout:fragment="content"></th:block>
 		<!-- 기본 템플릿 안에 삽입될 내용 End -->

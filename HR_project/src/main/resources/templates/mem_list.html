@@ -1,8 +1,8 @@
 <html layout:decorate="~{layout}">	<!-- layout.html 상속-->
 <div layout:fragment="content" class="container my-3">
 	<table class = "table">
-	    <thead class="table-dark">
-	        <tr>
+	    <thead>
+	        <tr class="table-secondary">
 				<th>번호</th>
 	            <th>사원명</th>
 	            <th>담당부서</th>
@@ -10,7 +10,7 @@
 	        </tr>
 	    </thead>
 	    <tbody>
-	        <tr th:each="member, loop : ${paging}">
+	        <tr class="table-light" th:each="member, loop : ${paging}">
 				<td th:text="${paging.getTotalElements - (paging.number * paging.size) - loop.index}"></td>
 				<td>
 					<a th:href="@{|/HR3/detail/${member.EmployeeID}|}" th:text="${member.Name}"></a>

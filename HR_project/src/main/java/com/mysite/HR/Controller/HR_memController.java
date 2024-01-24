@@ -56,4 +56,9 @@ public class HR_memController {
 		this.memService.create(Name, EmployeeID, StartDate, DeptName, Position, Email, BankNum, RegularPay);
         return "redirect:/HR3/list";	// 질문 저장 후 질문 목록으로 이동
     }
+	
+	@GetMapping("/company")
+	public String company() {
+		return "company";
+	}
 }

@@ -1,37 +1,37 @@
 <html layout:decorate="~{layout}">
 <div layout:fragment="content" class="container">
-    <h5 class="my-3 border-bottom pb-2">사원등록</h5>
+    <h5 class="my-3 border-bottom pb-2 text-white">사원등록</h5>
     <form th:action="@{/HR3/create}" method="post">
         <div class="mb-3">
-            <label for="Name" class="form-label">사원이름</label>
+            <label for="Name" class="form-label text-white">사원이름</label>
             <input type="text" name="Name" id="Name" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="EmployeeID" class="form-label">사원번호</label>
+            <label for="EmployeeID" class="form-label text-white">사원번호</label>
             <input type="text" name="EmployeeID" id="EmployeeID" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="StartDate" class="form-label">입사일자</label>
+            <label for="StartDate" class="form-label text-white">입사일자</label>
             <input type="text" name="StartDate" id="StartDate" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="DeptName" class="form-label">부서명</label>
+            <label for="DeptName" class="form-label text-white">부서명</label>
             <input type="text" name="DeptName" id="DeptName" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="Position" class="form-label">직급명</label>
+            <label for="Position" class="form-label text-white">직급명</label>
             <input type="text" name="Position" id="Position" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="Email" class="form-label">이메일</label>
+            <label for="Email" class="form-label text-white">이메일</label>
             <input type="text" name="Email" id="Email" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="BankNum" class="form-label">계좌번호</label>
+            <label for="BankNum" class="form-label text-white">계좌번호</label>
             <input type="number" name="BankNum" id="BankNum" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="RegularPay" class="form-label">기본급여</label>
+            <label for="RegularPay" class="form-label text-white">기본급여</label>
             <input type="number" name="RegularPay" id="RegularPay" class="form-control">
         </div>
         <input type="submit" value="등록하기" class="btn btn-primary my-2">

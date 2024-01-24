@@ -1,0 +1,47 @@
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container">
+<head>
+    <title>회사 소개</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+	<style>
+		body {
+			background-color: #333;
+			color: white;
+		}
+		img.company-image {
+			margin-top: 30px;
+			display : block;
+			margin:auto;
+			text-align:center;
+		}
+		.content-div {
+			margin-bottom:20px;
+			text-align:center;
+		}
+		h2, h3 {
+			margin-top: 30px;
+			margin-bottom: 15px;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<img class="company-image" th:src="@{/image/company.jpg}" alt="회사 사진" width="750">
+	<h2>혁신을 넘어, 미래를 향한 여정</h2>
+	<div class="content-div">Jump to Moon ERP는 비즈니스의 효율성과 혁신성을 극대화하기 위해 최첨단 ERP 솔루션을 제공하는 기업입니다.
+		2024년에 설립된 저희 회사는 기업의 복잡한 비즈니스 과정을 간소화하고 최적화하는 데 중점을 두고 있습니다.
+		고객의 요구를 충족시키는 맞춤형 서비스를 통해 기업 운영의 효율성을 극대화하며, 지속 가능한 성장을 도모합니다.
+		저희의 ERP 시스템은 최신 기술과 혁신적인 접근 방식을 결합하여, 기업이 급변하는 시장 환경에서 경쟁 우위를 확보할 수 있도록 지원합니다.
+		데이터 관리, 재무 관리, 인적 자원 관리 등 기업 운영의 핵심 영역에 걸쳐 포괄적인 솔루션을 제공합니다.
+		Jump to Moon ERP와 함께라면, 귀사의 비즈니스가 새로운 차원의 성공으로 도약할 수 있습니다.
+		우리는 귀사의 미래를 함께 그려나갈 준비가 되어 있습니다.</div>
+	<h3>연락처</h3>
+	<div class="content-div">전화번호: 02-123-4567
+	팩스: 02-123-4568
+	고객 서비스: 080-123-4567</div>
+
+	<h3>주소</h3>
+	<div class="content-div">본사: 서울특별시 강남구 테헤란로 123, Jump to Moon 빌딩</div>
+</body>
+</html>
